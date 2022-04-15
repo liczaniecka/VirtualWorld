@@ -23,7 +23,7 @@ exceptions, eg. turtle). In the case of equal strength, the encounter is won by 
 game also includes a human player, who is a specific kind of animal. Unlike regular
 animals, his movement is not random. Instead, the direction of the human's movement is
 determined by the player by pressing the appropriate arrow key before the start of every
-round. The human also possesses a special ability,
+round. The human also possesses a special ability - purification (Human destroys all animals and plants that are adjacent to his position),
 which can be activated with a separate key. Once activated, the ability works for 5 turns,
 after which it is automatically deactivated. After deactivation, the ability cannot be activated
 for the next 5 turns. 
@@ -33,7 +33,7 @@ There is a mechanism of sawing implemented for plants.
 The simulation is initiated with several instances of every kind of
 organism already placed in the game world. The program window includes a text box
 for displaying messages about the results of fights between animals, consumption of plants
-and other events occurring inside the simulated world. There is an option to save the current state of the game and then load it to the next game. 
+and other events occurring inside the simulated world. There is an option to save the current state of the game and then load it to the next game. You can add any organism to the game (at any time) by clicking one cell and choosing which animal to add. 
 The game ends, when the human player dies or when the map is full.
 
 ### Description of animal classes
@@ -56,6 +56,13 @@ The game ends, when the human player dies or when the map is full.
 | guarana | 0 | default for Plant | Strength of the animal which ate guarana is permanently increased by 3. |
 | belladonna | 99 | default for Plant | Kills any animal which eats it. |
 | Sosnowsky's hogweed | 10 | Kills every animal in its immediate neighbourhood except for cyber-sheep. | Kills any animal which eats it, apart from cyber-sheep. |
+
+
+
+
+![image](https://user-images.githubusercontent.com/85834675/163555845-25937ff7-17f3-4abf-89e8-c0932c1ffcf9.png)
+
+![image](https://user-images.githubusercontent.com/85834675/163555954-7827f4c6-f8b8-45a7-ac02-671c32e95022.png)
 
 
 
