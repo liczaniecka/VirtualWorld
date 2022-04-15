@@ -27,11 +27,13 @@ round. The human also possesses a special ability,
 which can be activated with a separate key. Once activated, the ability works for 5 turns,
 after which it is automatically deactivated. After deactivation, the ability cannot be activated
 for the next 5 turns. 
+In the case of a collision of two organisms of the same specie, they can breed a new organism.
+There is a mechanism of sawing implemented for plants. 
 
 The simulation is initiated with several instances of every kind of
 organism already placed in the game world. The program window includes a text box
 for displaying messages about the results of fights between animals, consumption of plants
-and other events occurring inside the simulated world.
+and other events occurring inside the simulated world. There is an option to save the current state of the game and then load it to the next game. 
 The game ends, when the human player dies or when the map is full.
 
 ### Description of animal classes
@@ -44,3 +46,19 @@ The game ends, when the human player dies or when the map is full.
 | turtle | 2 | 1 | Has 75% chance to stay in the same place | Reflects attacks of animal with strength less than 5. Attacker will return to the previous cell. |
 | antelope | 4 | 4 | Has wider range of movement - 2 fields instead of 1. | Has 50% chance to escape from fight. In such case it moves to a free neighbouring cell. |
 | cyber-sheep | 11 | 4 | Its main goal is the extermination of Sosnowsky's hogweed. It always moves towards the closes hogweed and tries to eat it. If there are no Sosnowsky's hogweeds, it behaves like a normal sheep. | Eats Sosnowsky's hogweed. |
+
+### Description of plant classes
+
+| plant | strength | action | collision |
+| --- | --- | --- | --- | 
+| grass | 0 | default for Plant | default for Plant |
+| sow thistle | 0 | Performs 3 attempts at spreading in each turn | default for Plant |
+| guarana | 0 | default for Plant | Strength of the animal which ate guarana is permanently increased by 3. |
+| belladonna | 99 | default for Plant | Kills any animal which eats it. |
+| Sosnowsky's hogweed | 10 | Kills every animal in its immediate neighbourhood except for cyber-sheep. | Kills any animal which eats it, apart from cyber-sheep. |
+
+
+
+
+
+
